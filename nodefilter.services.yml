@@ -1,0 +1,10 @@
+services:
+  nodefilter.filter_by_content_and_field_handler:
+    class: Drupal\nodefilter\Handler\FilterByContentAndFieldHandler
+  nodefilter.filter_by_content_handler:
+    class: Drupal\nodefilter\Handler\FilterByContentHandler
+  nodefilter.filter_by_field_handler:
+    class: Drupal\nodefilter\Handler\FilterByFieldHandler
+  nodefilter.get_all_handler:
+    class: Drupal\nodefilter\Handler\GetAllHandler
+

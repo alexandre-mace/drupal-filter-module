@@ -1,0 +1,14 @@
+{
+  "name": "drupal/nodefilter",
+  "type": "drupal-module",
+  "description": "Filter module that can filter node types",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/nodefilter",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/nodefilter",
+    "source": "http://cgit.drupalcode.org/nodefilter"
+  },
+  "require": { }
+}

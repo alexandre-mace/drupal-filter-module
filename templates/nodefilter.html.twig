@@ -1,0 +1,18 @@
+<!-- Add you custom twig html here -->
+{% if nodes is defined and not empty %}
+    {% for node in nodes %}
+        {{ node }}
+    {% endfor %}
+{% endif %}
+
+{% if fields is defined and not empty %}
+    <ul>
+        {% for title, value  in fields %}
+            <li>
+                <h2>{{ title }}</h2>
+                <span>{{ value }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+

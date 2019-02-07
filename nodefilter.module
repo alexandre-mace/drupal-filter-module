@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains nodefilter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nodefilter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nodefilter module.
+    case 'help.page.nodefilter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Filter module that can filter node types') . '</p>';
+      $output .= '<p>' . t('4 routes are available') . '</p>';
+      $output .= '<p>' . t('nodefilter/all : gets all nodes') . '</p>';
+      $output .= '<p>' . t('nodefilter/{contentType} : gets content type filtered nodes (e.g Articles and Pages)') . '</p>';
+      $output .= '<p>' . t('nodefilter/all/{field} : gets field filtered nodes (e.g title or body)') . '</p>';
+      $output .= '<p>' . t('nodefilter/{contentType}/{field} : gets content type filtered and field filtered nodes ') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nodefilter_theme() {
+  return [
+    'nodefilter' => [
+        'render element' => 'children',
+        'variables' => [
+          'nodes' => NULL,
+          'fields' => NULL
+      ],
+    ],
+  ];
+}

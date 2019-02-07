@@ -1,0 +1,5 @@
+name: 'nodefilter'
+type: module
+description: 'Filter module that can filter node types'
+core: 8.x
+package: 'Custom'

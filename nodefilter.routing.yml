@@ -1,0 +1,31 @@
+nodefilter.get_all_controller_get_all:
+  path: '/nodefilter/all'
+  defaults:
+    _controller: '\Drupal\nodefilter\Controller\GetAllController::getAll'
+    _title: 'get all'
+  requirements:
+    _permission: 'access content'
+
+nodefilter.filter_by_content_and_field_controller_filter:
+  path: '/nodefilter/{contentType}/{field}'
+  defaults:
+    _controller: '\Drupal\nodefilter\Controller\FilterByContentAndFieldController::filter'
+    _title: 'filter by content and field'
+  requirements:
+    _permission: 'access content'
+
+nodefilter.filter_by_content_controller_filter:
+  path: '/nodefilter/{contentType}'
+  defaults:
+    _controller: '\Drupal\nodefilter\Controller\FilterByContentController::filter'
+    _title: 'filter by content'
+  requirements:
+    _permission: 'access content'
+
+nodefilter.filter_by_field_controller_filter:
+  path: '/nodefilter/all/{field}'
+  defaults:
+    _controller: '\Drupal\nodefilter\Controller\FilterByFieldController::filter'
+    _title: 'filter by field'
+  requirements:
+    _permission: 'access content'
